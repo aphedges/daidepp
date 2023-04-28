@@ -5,7 +5,14 @@ from typing import Optional, Tuple, Union
 
 from typing_extensions import get_args
 
-from daidepp.constants import *
+from daidepp.constants import (
+    Coast,
+    Power,
+    ProvinceNoCoast,
+    ProvinceSea,
+    Season,
+    UnitType,
+)
 from daidepp.keywords.daide_object import _DAIDEObject
 
 _prov_no_coast = [prov for lit in get_args(ProvinceNoCoast) for prov in get_args(lit)]

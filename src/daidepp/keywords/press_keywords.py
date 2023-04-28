@@ -1,14 +1,11 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import TYPE_CHECKING
+from typing import Iterable, List, Optional, Tuple, Union
 
-from daidepp.constants import *
-from daidepp.keywords.base_keywords import *
+from daidepp.constants import Power, TryTokens
+from daidepp.keywords.base_keywords import Command, Location, Turn, Unit
 from daidepp.keywords.daide_object import _DAIDEObject
-
-if TYPE_CHECKING:
-    from typing import Iterable, List, Optional, Tuple, Union
 
 
 @dataclass(eq=True, frozen=True)
@@ -685,16 +682,7 @@ Arrangement = Union[
 ]
 
 AnyDAIDEToken = Union[
-    RTO,
-    DSB,
-    BLD,
-    REM,
-    WVE,
-    HLD,
-    MTO,
-    SUP,
-    CVY,
-    MoveByCVY,
+    Command,
     YES,
     REJ,
     BWX,
